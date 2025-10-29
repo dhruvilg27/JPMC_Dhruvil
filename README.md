@@ -110,7 +110,10 @@ You can also execute the **entire workflow — including both income classificat
 #### **To run the full pipeline in one command:**
 ```bash
 python main.py
+```
+
 ---
+
 
 ## 📊 5. Model Summary
 
