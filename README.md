@@ -57,7 +57,7 @@ project_root/
 
 ### Step 1: Create Environment
 ```bash
-conda create -n jpmc_project python=3.10
+conda create -n jpmc_project python=3.11
 conda activate jpmc_project
 ```
 
@@ -103,6 +103,13 @@ preds = score_and_decide(df_new, "outputs/final_model.pkl")
 print(preds.head())
 ```
 
+### **D. Run Complete Pipeline via `main.py`**
+
+You can also execute the **entire workflow — including both income classification and segmentation —** directly from a single Python script.
+
+#### **To run the full pipeline in one command:**
+```bash
+python main.py
 ---
 
 ## 📊 5. Model Summary
@@ -120,14 +127,22 @@ print(preds.head())
 
 ---
 
-## 💡 6. Insights
+## 💡 6. End-to-End Pipeline (Demo Notebook)
+-The demo.ipynb notebook provides a complete end-to-end execution pipeline that reproduces every stage of the project in a single run.
+-It integrates all major components — from data preprocessing to final segmentation and explainability — in one streamlined workflow.
+```bash
+jupyter notebook notebooks/demo.ipynb
+```
+---
+
+## 💡 7. Insights
 - **Education level, hours worked per week, occupation type, and marital status** were among the strongest predictors of high income.  
 - **Cluster segmentation** revealed eight distinct socioeconomic groups with varying purchasing potential.  
 - **Cluster lift analysis** helps prioritize marketing efforts toward high-income or high-spend segments.
 
 ---
 
-## 🧾 7. References
+## 🧾 8. References
 - U.S. Census Bureau: Current Population Surveys (1994–1995)  
 - scikit-learn Documentation (v1.5)  
 - XGBoost Documentation  
